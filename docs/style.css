@@ -11,6 +11,7 @@
   --border: #D9CFC0;
   --success: #7CB342;
   --error: #D32F2F;
+  --header-green: #A8D5BA;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +40,7 @@ html {
 
 body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--tan-light) 100%);
+  background-color: #F9F7F3;
   background-attachment: fixed;
   color: var(--text-dark);
   line-height: 1.6;
@@ -103,14 +104,22 @@ main > section {
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: var(--primary);
+  color: var(--header-green);
   text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 h3 {
-  color: var(--primary);
+  color: var(--header-green);
   margin-bottom: 10px;
   font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
 }
 
 /* Intro Section */
@@ -143,26 +152,15 @@ h3 {
 }
 
 .qa-block h3 {
-  margin-bottom: 16px;
-  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
 }
 
-.qa-block ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.qa-block li {
-  padding: 8px 0;
+.qa-block p {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-.qa-block li:before {
-  content: '';
-  margin-right: 0;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -228,19 +226,19 @@ h3 {
 
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
   margin-bottom: 40px;
 }
 
 .theme-card {
   background: white;
-  padding: 20px 16px;
-  border-radius: 14px;
+  padding: 14px 12px;
+  border-radius: 12px;
   border: 2px solid var(--border);
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(107, 68, 35, 0.06);
+  box-shadow: 0 2px 8px rgba(107, 68, 35, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -253,28 +251,28 @@ h3 {
 }
 
 .theme-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(107, 68, 35, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(107, 68, 35, 0.1);
   border-color: var(--accent);
 }
 
 .theme-emoji {
-  font-size: 2rem;
-  margin-bottom: 12px;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
   display: block;
 }
 
 .theme-card h4 {
-  font-size: 0.95rem;
-  color: var(--primary);
-  margin-bottom: 6px;
-  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--header-green);
+  margin-bottom: 4px;
+  font-weight: 700;
 }
 
 .theme-card p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--text-light);
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 /* Signup Section */
