@@ -11,7 +11,8 @@
   --border: #D9CFC0;
   --success: #7CB342;
   --error: #D32F2F;
-  --header-green: #A8D5BA;
+  --card-bg: #c5dcc2;
+  --header-brown: #A08060;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,7 +105,7 @@ main > section {
 h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: var(--header-green);
+  color: var(--header-brown);
   text-align: center;
   font-weight: 700;
   text-decoration: underline;
@@ -113,7 +114,7 @@ h2 {
 }
 
 h3 {
-  color: var(--header-green);
+  color: var(--header-brown);
   margin-bottom: 10px;
   font-size: 1.1rem;
   font-weight: 700;
@@ -138,7 +139,7 @@ h3 {
 }
 
 .qa-block {
-  background: white;
+  background: var(--card-bg);
   padding: 28px 24px;
   border-radius: 16px;
   border: 2px solid var(--border);
@@ -178,7 +179,7 @@ h3 {
 }
 
 .tile {
-  background: white;
+  background: var(--card-bg);
   padding: 28px 24px;
   border-radius: 16px;
   border: 2px solid var(--border);
@@ -232,7 +233,7 @@ h3 {
 }
 
 .theme-card {
-  background: white;
+  background: var(--card-bg);
   padding: 14px 12px;
   border-radius: 12px;
   border: 2px solid var(--border);
@@ -264,7 +265,7 @@ h3 {
 
 .theme-card h4 {
   font-size: 0.85rem;
-  color: var(--header-green);
+  color: var(--header-brown);
   margin-bottom: 4px;
   font-weight: 700;
 }
@@ -281,7 +282,7 @@ h3 {
 }
 
 .signup-wrapper {
-  background: white;
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 18px;
   border: 2px solid var(--border);
@@ -421,7 +422,7 @@ h3 {
 
 /* FAQ Section */
 .faq {
-  background: white;
+  background: var(--card-bg);
   padding: 35px;
   border-radius: 18px;
   border: 2px solid var(--border);
@@ -441,7 +442,7 @@ h3 {
 }
 
 .faq-item {
-  background: var(--tan-light);
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
   border: 1px solid var(--border);
