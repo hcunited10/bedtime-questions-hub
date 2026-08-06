@@ -10,124 +10,139 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>🌙 Bedtime Questions Hub</h1>
-            <p class="tagline">A daily moment to help your child shine</p>
+            <div class="header-content">
+                <h1>🌙 Bedtime Questions Hub</h1>
+                <p class="tagline">✨ Spark curiosity. Build confidence. Every night. ✨</p>
+            </div>
         </header>
 
         <main>
-            <section class="description">
-                <h2>How it works</h2>
-                <p>
-                    Every night, your child receives a thoughtfully-crafted, open-ended question designed to spark
-                    reflection and build confidence. Each question is themed around a different confidence-building topic—
-                    courage, kindness, resilience, creativity, and more.
-                </p>
-                <p>
-                    Unlike yes/no questions, these open-ended prompts invite your child to share their thoughts, feelings,
-                    and experiences, helping them recognize their own strengths and positive qualities.
-                </p>
-                <p>
-                    <strong>What makes this special:</strong>
-                </p>
-                <ul>
-                    <li>One new question per night at your chosen time</li>
-                    <li>Themes rotate through 12 confidence-building topics</li>
-                    <li>Personalized with your child's name in the email</li>
-                    <li>Parent-facing tips explain why each question matters</li>
-                    <li>Mobile-optimized emails, beautifully designed</li>
-                </ul>
+            <!-- What We Do Section -->
+            <section class="what-section">
+                <div class="tile-grid">
+                    <div class="tile">
+                        <div class="tile-emoji">💭</div>
+                        <h3>Open-Ended Questions</h3>
+                        <p>Thoughtful prompts that inspire reflection, not yes/no answers.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="tile-emoji">🎯</div>
+                        <h3>12 Confidence Themes</h3>
+                        <p>Courage, kindness, resilience, creativity, and more—rotating daily.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="tile-emoji">📧</div>
+                        <h3>Perfect Timing</h3>
+                        <p>Delivered at your chosen time, in your timezone, every single night.</p>
+                    </div>
+                    <div class="tile">
+                        <div class="tile-emoji">💡</div>
+                        <h3>Parent Tips</h3>
+                        <p>Learn why each question builds confidence—tailored guidance included.</p>
+                    </div>
+                </div>
             </section>
 
+            <!-- Signup Section -->
             <section class="signup-section">
-                <h2>Sign up for your family</h2>
-                <form id="signupForm" class="signup-form">
-                    <div class="form-group">
-                        <label for="parent_email">Parent Email *</label>
-                        <input
-                            type="email"
-                            id="parent_email"
-                            name="parent_email"
-                            required
-                            placeholder="your@email.com"
-                        >
+                <div class="signup-wrapper">
+                    <div class="signup-header">
+                        <h2>✋ Let's get started</h2>
+                        <p>Sign up your family in under a minute.</p>
                     </div>
 
-                    <div class="form-group">
-                        <label for="child_name">Child's Name *</label>
-                        <input
-                            type="text"
-                            id="child_name"
-                            name="child_name"
-                            required
-                            placeholder="e.g., Alice, Jasper, Morgan"
-                        >
-                    </div>
-
-                    <div class="form-row">
+                    <form id="signupForm" class="signup-form">
                         <div class="form-group">
-                            <label for="desired_time">Preferred Email Time *</label>
+                            <label for="parent_email">📧 Parent Email</label>
                             <input
-                                type="time"
-                                id="desired_time"
-                                name="desired_time"
+                                type="email"
+                                id="parent_email"
+                                name="parent_email"
                                 required
-                                value="18:30"
+                                placeholder="your@email.com"
                             >
                         </div>
 
                         <div class="form-group">
-                            <label for="timezone">Your Timezone *</label>
-                            <select id="timezone" name="timezone" required>
-                                <option value="">-- Select timezone --</option>
-                                <option value="America/New_York">Eastern (New York)</option>
-                                <option value="America/Chicago">Central (Chicago)</option>
-                                <option value="America/Denver" selected>Mountain (Denver)</option>
-                                <option value="America/Phoenix">Arizona (no DST)</option>
-                                <option value="America/Los_Angeles">Pacific (Los Angeles)</option>
-                                <option value="America/Anchorage">Alaska</option>
-                                <option value="Pacific/Honolulu">Hawaii</option>
-                                <option value="UTC">UTC</option>
-                            </select>
+                            <label for="child_name">👶 Child's Name</label>
+                            <input
+                                type="text"
+                                id="child_name"
+                                name="child_name"
+                                required
+                                placeholder="e.g., Alex, Saige, Jordan"
+                            >
                         </div>
-                    </div>
 
-                    <!-- Honeypot field (hidden from real users) -->
-                    <input type="text" name="website" style="display: none;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="desired_time">⏰ Email Time</label>
+                                <input
+                                    type="time"
+                                    id="desired_time"
+                                    name="desired_time"
+                                    required
+                                    value="18:30"
+                                >
+                            </div>
 
-                    <button type="submit" class="submit-button">Sign Up</button>
+                            <div class="form-group">
+                                <label for="timezone">🌍 Timezone</label>
+                                <select id="timezone" name="timezone" required>
+                                    <option value="">-- Select timezone --</option>
+                                    <option value="America/New_York">🗽 Eastern (New York)</option>
+                                    <option value="America/Chicago">🌽 Central (Chicago)</option>
+                                    <option value="America/Denver" selected>🏔️ Mountain (Denver)</option>
+                                    <option value="America/Phoenix">🏜️ Arizona (no DST)</option>
+                                    <option value="America/Los_Angeles">🌊 Pacific (Los Angeles)</option>
+                                    <option value="America/Anchorage">❄️ Alaska</option>
+                                    <option value="Pacific/Honolulu">🌺 Hawaii</option>
+                                    <option value="UTC">🌐 UTC</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div id="successMessage" class="message message-success" style="display: none;">
-                        ✓ You're all set! You'll receive your first question tonight.
-                    </div>
-                    <div id="errorMessage" class="message message-error" style="display: none;">
-                        <strong>Error:</strong> <span id="errorDetail"></span>
-                    </div>
-                </form>
+                        <!-- Honeypot field (hidden from real users) -->
+                        <input type="text" name="website" style="display: none;">
+
+                        <button type="submit" class="submit-button">Create Account ✨</button>
+
+                        <div id="successMessage" class="message message-success" style="display: none;">
+                            ✅ Welcome! Your first question arrives tonight.
+                        </div>
+                        <div id="errorMessage" class="message message-error" style="display: none;">
+                            <strong>Oops!</strong> <span id="errorDetail"></span>
+                        </div>
+                    </form>
+                </div>
             </section>
 
+            <!-- FAQ Section -->
             <section class="faq">
-                <h2>Questions?</h2>
-                <details>
-                    <summary>How often do I receive emails?</summary>
-                    <p>Once per night at your chosen time (in your local timezone).</p>
-                </details>
-                <details>
-                    <summary>Can I change my preferred time or timezone?</summary>
-                    <p>Yes! Simply re-submit the form with your new preferences and it will update in place.</p>
-                </details>
-                <details>
-                    <summary>Will my data be shared?</summary>
-                    <p>No. Your email and child's name are only used to deliver your personalized emails.</p>
-                </details>
-                <details>
-                    <summary>How do I unsubscribe?</summary>
-                    <p>Reply to any email with "unsubscribe" and we'll remove you from the list.</p>
-                </details>
+                <h2>❓ Quick questions</h2>
+                <div class="faq-grid">
+                    <details class="faq-item">
+                        <summary>📅 How often are questions sent?</summary>
+                        <p>Every night at your chosen time in your local timezone.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>🔄 Can I change my time or timezone?</summary>
+                        <p>Absolutely! Re-submit the form anytime and we'll update your preferences.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>🔒 Is my data private?</summary>
+                        <p>Your email and child's name are only used to send personalized questions.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>🚪 How do I unsubscribe?</summary>
+                        <p>Reply to any email with "unsubscribe" and we'll remove you immediately.</p>
+                    </details>
+                </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Built with ❤️ for families</p>
+            <p>Made with 💚 for curious families everywhere</p>
         </footer>
     </div>
 
