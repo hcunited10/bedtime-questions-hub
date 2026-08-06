@@ -1,0 +1,263 @@
+:root {
+  --primary: #d6336c;
+  --accent: #e8b8d8;
+  --light-bg: #f8d5e8;
+  --dark-text: #3a2233;
+  --light-text: #8a6a8a;
+  --success: #28a745;
+  --error: #dc3545;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #ff69b4;
+    --accent: #c2255c;
+    --light-bg: #2a1a2a;
+    --dark-text: #f0e0f0;
+    --light-text: #c9b9c9;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 0 30px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--light-text);
+  font-weight: 300;
+}
+
+main > section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.description p {
+  margin-bottom: 15px;
+  color: var(--light-text);
+}
+
+.description ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.description li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  color: var(--light-text);
+}
+
+.description li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+}
+
+.signup-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .signup-section {
+    background: #3a2a3a;
+  }
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: white;
+  color: var(--dark-text);
+  transition: border-color 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-group input,
+  .form-group select {
+    background: #2a1a2a;
+    color: var(--dark-text);
+  }
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(214, 51, 108, 0.1);
+}
+
+.submit-button {
+  padding: 14px 24px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-button:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.message {
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.message-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@media (prefers-color-scheme: dark) {
+  .message-success {
+    background: #1e5631;
+    color: #95d5b2;
+    border-color: #52b788;
+  }
+
+  .message-error {
+    background: #5a1a20;
+    color: #ff8fa3;
+    border-color: #e63946;
+  }
+}
+
+.faq {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .faq {
+    background: #3a2a3a;
+  }
+}
+
+details {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: 600;
+  color: var(--primary);
+  padding: 10px 0;
+  user-select: none;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details > p {
+  margin-top: 12px;
+  margin-left: 20px;
+  color: var(--light-text);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0 20px;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-section,
+  .faq {
+    padding: 20px;
+  }
+}
