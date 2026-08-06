@@ -1,5 +1,5 @@
 // Replace this with your deployed Google Apps Script Web App URL
-const APPS_SCRIPT_URL = 'REPLACE_ME';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzScO87AkawOFRq4BoJfIrpZwmI4tbv0N7IDQhHDJxdZDDRKVPWi9tpIkpE8rwr1KTS/exec';
 
 const form = document.getElementById('signupForm');
 const successMessage = document.getElementById('successMessage');
