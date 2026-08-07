@@ -1,12 +1,12 @@
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
+from lib.gmail_notifier import is_configured, send_html_report
 
 import config
 import subscribers
 from email_template import render_email
 from history import append_entry, load_history, recent_window, save_history
-from lib.gmail_notifier import is_configured, send_html_report
 from question_generator import generate_question
 from theme_emojis import get_theme_emoji
 from themes import pick_todays_theme
