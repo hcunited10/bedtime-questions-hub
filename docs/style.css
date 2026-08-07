@@ -121,10 +121,11 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  align-items: stretch;
 }
 
 .qa-column {
-  flex: 1;
+  display: flex;
 }
 
 .qa-block {
@@ -133,6 +134,7 @@ h3 {
   border-radius: 16px;
   border: 2px solid var(--border);
   box-shadow: 0 4px 12px rgba(123, 150, 105, 0.06);
+  flex: 1;
 }
 
 @media (prefers-color-scheme: dark) {
