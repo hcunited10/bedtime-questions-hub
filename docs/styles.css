@@ -42,28 +42,14 @@ html {
 
 body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #E6E6E6;
+  background-image: url('bg-texture.jpg');
   background-attachment: fixed;
+  background-size: cover;
   color: var(--text-dark);
   line-height: 1.6;
   position: relative;
 }
 
-/* Subtle background pattern */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(123, 150, 105, 0.05) 1px, transparent 1px),
-    radial-gradient(circle at 80% 80%, rgba(108, 132, 128, 0.03) 1px, transparent 1px);
-  background-size: 80px 80px, 120px 120px;
-  pointer-events: none;
-  z-index: -1;
-}
 
 .container {
   max-width: 900px;
