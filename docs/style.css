@@ -44,8 +44,9 @@ body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   background-image: url('dream-bg.png?v=1');
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: top center;
   background-color: #0A1628;
   color: var(--text-dark);
   line-height: 1.6;
@@ -54,7 +55,7 @@ body {
 
 
 .container {
-  max-width: 700px;
+  max-width: 550px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
