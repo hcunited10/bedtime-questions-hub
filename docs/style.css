@@ -345,6 +345,7 @@ h3 {
 
 .form-group input,
 .form-group select {
+  width: 100%;
   padding: 12px 14px;
   border: 2px solid var(--border);
   border-radius: 10px;
@@ -353,6 +354,7 @@ h3 {
   color: var(--text-dark);
   transition: all 0.3s ease;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
