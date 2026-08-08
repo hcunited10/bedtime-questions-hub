@@ -7,7 +7,7 @@
   --mint: #6AAFDB;
   --cream: #FFF5E6;
   --text-dark: #FFF5E6;
-  --text-light: #FFD700;
+  --text-light: #FFFFFF;
   --border: #6AAFDB;
   --success: #6AAFDB;
   --error: #FF6B6B;
@@ -25,7 +25,7 @@
     --mint: #20B2AA;
     --cream: #FFFACD;
     --text-dark: #FFF8DC;
-    --text-light: #FFD700;
+    --text-light: #FFFFFF;
     --border: #20B2AA;
   }
 }
@@ -54,7 +54,7 @@ body {
 
 
 .container {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
@@ -360,8 +360,8 @@ h3 {
 
 .submit-button {
   padding: 14px 28px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
+  background: linear-gradient(135deg, #FFD700, #FFF5E6);
+  color: #000000;
   border: none;
   border-radius: 10px;
   font-size: 1.05rem;
