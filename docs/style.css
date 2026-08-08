@@ -44,7 +44,7 @@ body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   background-image: url('scroll-bg.png?v=1');
   background-attachment: scroll;
-  background-size: 100vw auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #0A1628;
