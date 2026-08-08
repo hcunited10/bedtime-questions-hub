@@ -17,16 +17,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #404E3B;
-    --secondary: #6C8480;
-    --accent: #BAC8B1;
-    --tan-light: #E6E6E6;
-    --tan-medium: #D9D9D9;
-    --mint: #7B9669;
-    --cream: #F5F5F5;
-    --text-dark: #404E3B;
-    --text-light: #6C8480;
-    --border: #BAC8B1;
+    --primary: #FFEAA7;
+    --secondary: #FFD700;
+    --accent: #20B2AA;
+    --tan-light: #FFF8DC;
+    --tan-medium: #FFFACD;
+    --mint: #20B2AA;
+    --cream: #FFFACD;
+    --text-dark: #FFF8DC;
+    --text-light: #FFD700;
+    --border: #20B2AA;
   }
 }
 
