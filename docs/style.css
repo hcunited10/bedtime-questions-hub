@@ -44,13 +44,14 @@ body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   background-image: url('dream-bg.png?v=1');
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: 100vw auto;
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #0A1628;
   color: var(--text-dark);
   line-height: 1.6;
   position: relative;
+  min-height: 100vh;
 }
 
 
