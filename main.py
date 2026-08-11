@@ -37,7 +37,7 @@ def main() -> None:
     recent_questions = [e["question"] for e in recent]
 
     theme = pick_todays_theme(history)
-    question, tip = generate_question(theme=theme, recent_questions=recent_questions)
+    question, tip = generate_question(theme=theme, recent_questions=recent_questions, max_retries=3)
 
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     theme_emoji = get_theme_emoji(theme)

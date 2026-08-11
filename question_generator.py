@@ -69,19 +69,23 @@ def generate_question(
 
 Generate ONE open-ended bedtime question for tonight, themed around: {theme_title}.
 
-Rules:
-- The question must be open-ended — it must NOT be answerable with just "yes" or "no".
-  Do not start with words like "Did", "Do", "Are", "Is", "Can", "Would", "Were", "Have".
-  Prefer starters like "What", "Tell me about", "How did", "What was it like when".
-- When addressing the child by name within the question, use a comma (e.g., "David, what...") or include their name naturally in the sentence. NEVER use em-dashes or en-dashes (— or –) anywhere in the question or tip.
-- Tone: warm, simple, concrete — vocabulary and sentence structure appropriate for a young child to understand and answer out loud at bedtime. One sentence, or two short sentences at most.
-- The question should invite the child to reflect on something specific from their day or their feelings, in a way that helps them recognize their own strengths, effort, or positive qualities related to the theme of {theme_title}.
-- Do not repeat or closely paraphrase any of these recently-asked questions:
+CRITICAL RULES:
+1. The question MUST be open-ended (NOT answerable with just "yes" or "no").
+2. NEVER start the question with: Did, Do, Does, Are, Is, Am, Can, Could, Would, Will, Was, Were, Have, Has, Should.
+3. Good starters: "What...", "Tell me about...", "How did...", "What was it like when...", "Describe...".
+4. The question MUST end with a question mark (?).
+5. Use commas for name vocatives (e.g., "David, what..."), NEVER em-dashes or en-dashes.
+6. Keep it simple, warm, age-appropriate for a 4-10 year old at bedtime.
+7. One sentence is ideal; two short sentences maximum.
+
+The question should help the child reflect on their day/feelings and recognize their strengths related to {theme_title}.
+
+Do NOT repeat any of these recent questions:
 {recent_questions_text}
 
-Also write a ONE-sentence tip for the parents (not shown to the child), explaining briefly why this kind of question helps build a child's confidence/self-esteem. Keep it under 30 words, plain language, no jargon. Do not use em-dashes or en-dashes in the tip either.
+Also write a ONE-sentence parent tip (under 30 words) explaining why this helps build confidence. No jargon, no em-dashes.
 
-Respond with ONLY a JSON object, no markdown fences, no extra text, in exactly this shape:
+Respond ONLY with valid JSON (no markdown fences, no extra text):
 {{"question": "...", "tip": "..."}}"""
 
     for attempt in range(max_retries + 1):

@@ -25,7 +25,7 @@ def main() -> None:
         raise RuntimeError("Gmail credentials not fully configured — check env vars.")
 
     print(f"Generating question for theme: {args.theme}...")
-    question, tip = generate_question(theme=args.theme, recent_questions=[], max_retries=3)
+    question, tip = generate_question(theme=args.theme, recent_questions=[], max_retries=5)
 
     date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     theme_emoji = get_theme_emoji(args.theme)
