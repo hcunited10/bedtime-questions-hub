@@ -9,8 +9,8 @@ THEME_EMOJIS = {
     "honesty": "💎",
     "perseverance": "🏔️",
     "empathy": "🌈",
-    "confidence": "⭐",
-    "growth": "🌟",
+    "confidence": "🌟",
+    "growth": "🚀",
 }
 
 

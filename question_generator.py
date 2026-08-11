@@ -5,6 +5,13 @@ import re
 from anthropic import Anthropic
 
 
+def _strip_dashes(text: str) -> str:
+    """Remove em-dashes and en-dashes, replacing with commas."""
+    text = text.replace(" — ", ", ").replace("—", ", ")
+    text = text.replace(" – ", ", ").replace("–", ", ")
+    return text
+
+
 def _parse_and_validate(raw_text: str) -> tuple[str, str] | None:
     """Parse and validate LLM response. Returns (question, tip) or None if invalid."""
     cleaned = re.sub(r"```json\s*|\s*```", "", raw_text).strip()
@@ -32,6 +39,9 @@ def _parse_and_validate(raw_text: str) -> tuple[str, str] | None:
 
     if not question.rstrip().endswith("?"):
         return None
+
+    question = _strip_dashes(question)
+    tip = _strip_dashes(tip)
 
     return (question, tip)
 
@@ -63,12 +73,13 @@ Rules:
 - The question must be open-ended — it must NOT be answerable with just "yes" or "no".
   Do not start with words like "Did", "Do", "Are", "Is", "Can", "Would", "Were", "Have".
   Prefer starters like "What", "Tell me about", "How did", "What was it like when".
+- When addressing the child by name within the question, use a comma (e.g., "David, what...") or include their name naturally in the sentence. NEVER use em-dashes or en-dashes (— or –) anywhere in the question or tip.
 - Tone: warm, simple, concrete — vocabulary and sentence structure appropriate for a young child to understand and answer out loud at bedtime. One sentence, or two short sentences at most.
 - The question should invite the child to reflect on something specific from their day or their feelings, in a way that helps them recognize their own strengths, effort, or positive qualities related to the theme of {theme_title}.
 - Do not repeat or closely paraphrase any of these recently-asked questions:
 {recent_questions_text}
 
-Also write a ONE-sentence tip for the parents (not shown to the child), explaining briefly why this kind of question helps build a child's confidence/self-esteem. Keep it under 30 words, plain language, no jargon.
+Also write a ONE-sentence tip for the parents (not shown to the child), explaining briefly why this kind of question helps build a child's confidence/self-esteem. Keep it under 30 words, plain language, no jargon. Do not use em-dashes or en-dashes in the tip either.
 
 Respond with ONLY a JSON object, no markdown fences, no extra text, in exactly this shape:
 {{"question": "...", "tip": "..."}}"""
