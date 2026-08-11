@@ -27,7 +27,7 @@ def main() -> None:
     print(f"Generating question for theme: {args.theme}...")
     question, tip = generate_question(theme=args.theme, recent_questions=[], max_retries=5)
 
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    date_str = datetime.now(timezone.utc).strftime("%m/%d/%Y")
     theme_emoji = get_theme_emoji(args.theme)
 
     html = render_email(

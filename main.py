@@ -39,7 +39,7 @@ def main() -> None:
     theme = pick_todays_theme(history)
     question, tip = generate_question(theme=theme, recent_questions=recent_questions, max_retries=3)
 
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    date_str = datetime.now(timezone.utc).strftime("%m/%d/%Y")
     theme_emoji = get_theme_emoji(theme)
 
     sender = config.GMAIL_SENDER
@@ -54,7 +54,7 @@ def main() -> None:
     for subscriber in due:
         try:
             sub_local_dt = subscribers.local_now(subscriber, now_utc)
-            sub_local_date = sub_local_dt.strftime("%Y-%m-%d")
+            sub_local_date = sub_local_dt.strftime("%m/%d/%Y")
 
             html = render_email(
                 question=question,
