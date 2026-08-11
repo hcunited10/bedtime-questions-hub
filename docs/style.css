@@ -42,11 +42,11 @@ html {
 
 body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background-image: url('scroll-bg.png?v=1');
-  background-attachment: scroll;
-  background-size: auto 100%;
+  background-image: url('gemini-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
   background-color: #0A1628;
   color: var(--text-dark);
   line-height: 1.6;
