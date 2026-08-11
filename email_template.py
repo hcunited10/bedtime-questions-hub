@@ -36,12 +36,12 @@ def render_email(
 
                     <!-- Decorative Header with Moon -->
                     <p style="margin: 0 0 12px 0; font-family: -apple-system, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; color: #FFD700; letter-spacing: 1.2px; text-transform: uppercase; text-align: center; font-style: italic;">
-                        🌙 Tonight's Question
+                        🌙 Tonight's Question for
                     </p>
 
                     <!-- Child's Name - Prominent -->
                     <p style="margin: 0 0 28px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 32px; font-weight: 700; color: #FFFFFF; text-align: center; line-height: 1.1; letter-spacing: -0.5px;">
-                        for {child_name}
+                        {child_name}
                     </p>
 
                     <!-- Theme Pill - Bright Accent -->
