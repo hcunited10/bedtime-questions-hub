@@ -1,0 +1,45 @@
+name: Send Test Design Preview Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipient:
+        description: "Recipient email address"
+        required: false
+        default: "d.piazza10@gmail.com"
+      child_name:
+        description: "Placeholder child name"
+        required: false
+        default: "David"
+      theme:
+        description: "Theme to preview"
+        required: false
+        default: "courage"
+
+permissions:
+  contents: read
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send test design preview email
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python send_test_email.py --recipient "${{ inputs.recipient }}" --child-name "${{ inputs.child_name }}" --theme "${{ inputs.theme }}"
