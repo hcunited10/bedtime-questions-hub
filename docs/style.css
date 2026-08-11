@@ -42,7 +42,7 @@ html {
 
 body {
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background-image: url('gemini-bg.png');
+  background-image: url('background.png');
   background-attachment: scroll;
   background-size: 100% 100%;
   background-repeat: no-repeat;
